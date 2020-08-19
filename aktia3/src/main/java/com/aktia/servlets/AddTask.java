@@ -33,7 +33,9 @@ public class AddTask extends HttpServlet {
 		String taskId = rs.randomString(16);
 		String customerId = request.getParameter("customerId");
 		String taskDescription = request.getParameter("taskDescription");
-		String taskDone = request.getParameter("taskDone");
+		String taskDone = request.getParameter("taskDone").toLowerCase();
+		if (!taskDone.equals("true"))
+			taskDone="false";
 		AktiaDao.addCustomerTask(taskId, customerId, taskDescription, taskDone);
 		try {
 			JMS2.messageQueue("POST: AddTask - taskId:" + taskId + " customerId:" + customerId + " taskDescription:" + taskDescription + " taskDone:" + taskDone);

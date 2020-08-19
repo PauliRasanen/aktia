@@ -37,7 +37,7 @@
 	<form action="ChangeTaskStatus" method="post">
 		<label>taskId : </label>
 		<input type="text" name="taskId" required><br>
-		<label>New taskDone status : </label>
+		<label>TaskDone (true/false) : </label>
 		<input type="text" name="taskDone" required><br>	
 		<input type="submit" value="Send"></input>
 	</form>

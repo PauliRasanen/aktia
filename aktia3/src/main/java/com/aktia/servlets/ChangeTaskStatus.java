@@ -30,8 +30,9 @@ public class ChangeTaskStatus extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "/ListDb";
 		String taskId = request.getParameter("taskId");
-		String taskDone = request.getParameter("taskDone");
-		System.out.println("Servlet infot: " + taskId + " " + taskDone);
+		String taskDone = request.getParameter("taskDone").toLowerCase();
+		if (!taskDone.equals("true"))
+			taskDone="false";
 		AktiaDao.changeTaskStatus(taskId, taskDone);
 		try {
 			JMS2.messageQueue("POST: ChangeTaskStatus - taskId:" + taskId + " taskDone:" + taskDone);
