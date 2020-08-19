@@ -21,7 +21,7 @@
 		<label>TaskDescription : </label>
 		<input type="text" name="taskDescription" required><br>
 		<label>TaskDone (true/false) : </label>
-		<input type="text" name="taskDone"><br>		
+		<input type="text" name="taskDone" required><br>		
 		<input type="submit" value="Send"></input>
 	</form>
 
