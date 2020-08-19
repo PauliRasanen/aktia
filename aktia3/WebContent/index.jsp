@@ -18,7 +18,7 @@
 	<h3>Add Customer</h3>
 	<form action="AddCustomer" method="post">
 		<label>CustomerName : </label>
-		<input type="text" name="customerName"><br>		
+		<input type="text" name="customerName" required><br>		
 		<input type="submit" value="Send"></input>
 	</form>
 	<br>
@@ -26,19 +26,19 @@
 	<h3>Add Task</h3>
 	<form action="AddTask" method="post">
 		<label>CustomerId : </label>
-		<input type="text" name="customerId"><br>
+		<input type="text" name="customerId" required><br>
 		<label>TaskDescription : </label>
-		<input type="text" name="taskDescription"><br>
+		<input type="text" name="taskDescription" required><br>
 		<label>TaskDone (true/false) : </label>
-		<input type="text" name="taskDone"><br>		
+		<input type="text" name="taskDone" required><br>		
 		<input type="submit" value="Send"></input>
 	</form>
 	<h3>Change taskDone status</h3>
 	<form action="ChangeTaskStatus" method="post">
 		<label>taskId : </label>
-		<input type="text" name="taskId"><br>
+		<input type="text" name="taskId" required><br>
 		<label>New taskDone status : </label>
-		<input type="text" name="taskDone"><br>	
+		<input type="text" name="taskDone" required><br>	
 		<input type="submit" value="Send"></input>
 	</form>
 </body>

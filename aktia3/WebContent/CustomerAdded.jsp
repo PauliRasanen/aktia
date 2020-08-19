@@ -17,9 +17,9 @@
 	<h3>Add Task</h3>
 	<form action="AddTask" method="post">
 		<label>CustomerId : </label>
-		<input type="text" name="customerId"><br>
+		<input type="text" name="customerId" required><br>
 		<label>TaskDescription : </label>
-		<input type="text" name="taskDescription"><br>
+		<input type="text" name="taskDescription" required><br>
 		<label>TaskDone (true/false) : </label>
 		<input type="text" name="taskDone"><br>		
 		<input type="submit" value="Send"></input>
